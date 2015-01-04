@@ -2334,8 +2334,8 @@ window.theme = {};
 				menuAfterHeader: false,
 				alwaysStickyEnabled: false,
 				logoPaddingTop: 28,
-				logoSmallWidth: 82,
-				logoSmallHeight: 40
+				logoSmallWidth: 120,
+				logoSmallHeight: 50
 			},
 
 			initialize: function($wrapper, opts) {
