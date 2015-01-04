@@ -24,7 +24,7 @@
             <div class="post-meta">
                 <span><i class="fa fa-user"></i> By {% if article.author_url %}<a href="{{article.author_url}}">{{article.author}}</a>{% else %}{{ AUTHOR }}{% endif %} </span>
                 <span><i class="fa fa-tag"></i> {% for tag in article.tags %}<a href="{{SITE_URL}}/{{tag.url}}">{{tag}}</a> {% endfor %}</span>
-                <a href="blog-post.html" class="btn btn-xs btn-primary pull-right">Read more...</a>
+                <a href="{{ article.url }}" class="btn btn-xs btn-primary pull-right">Read more...</a>
             </div>
         </div>
     </article>
