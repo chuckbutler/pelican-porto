@@ -60,9 +60,11 @@
                         {% block content %}
                         {% endblock %}
                         </div>
+                        {% block sidebar %}
                         <div class="col-md-3">
                         {% include "modules/sidebar.html" %} 
                         </div>
+                        {% endblock %}
                     </div>
                 </div>
             </div>
