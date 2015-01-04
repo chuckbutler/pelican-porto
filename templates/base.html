@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/owlcarousel/owl.carousel.css" media="screen">
         <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/owlcarousel/owl.theme.css" media="screen">
         <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/magnific-popup/magnific-popup.css" media="screen">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/github-activity/github-activity-0.1.0.min.css">
 
         <!-- Theme CSS -->
         <link rel="stylesheet" href="{{SITE_URL}}/theme/css/theme.css">
@@ -32,6 +34,7 @@
 
         <!-- Head Libs -->
         <script src="{{SITE_URL}}/theme/vendor/modernizr/modernizr.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jquery/jquery.js"></script>
 
 
         <!--[if IE]>
@@ -48,7 +51,9 @@
         <div class="body">
            {% include "modules/nav.html" %}
             <div role="main" class="main">
-            {% include "modules/page-top.html" %}
+            {% block pagetop %}
+                {% include "modules/page-top.html" %}
+            {% endblock %}
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9">
@@ -65,21 +70,17 @@
         </div>
 
         <!-- Vendor -->
-        <script src="{{SITE_URL}}/theme/vendor/jquery/jquery.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/jquery.appear/jquery.appear.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/jquery.easing/jquery.easing.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/jquery-cookie/jquery-cookie.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/bootstrap/bootstrap.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/common/common.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/jquery.validation/jquery.validation.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/jquery.stellar/jquery.stellar.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/jquery.gmap/jquery.gmap.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/isotope/jquery.isotope.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/owlcarousel/owl.carousel.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/jflickrfeed/jflickrfeed.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/magnific-popup/jquery.magnific-popup.js"></script>
-        <script src="{{SITE_URL}}/theme/vendor/vide/vide.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/jquery.appear/jquery.appear.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/jquery.easing/jquery.easing.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/jquery-cookie/jquery-cookie.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/bootstrap/bootstrap.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/common/common.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/jquery.fitvid/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/isotope/jquery.isotope.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/owlcarousel/owl.carousel.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/vide/vide.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+        <script type="text/javascript" src="{{SITE_URL}}/theme/vendor/github-activity/github-activity-0.1.0.min.js"></script>
 
         <!-- Theme Base, Components and Settings -->
         <script src="{{SITE_URL}}/theme/js/theme.js"></script>
@@ -89,6 +90,11 @@
         <script src="{{SITE_URL}}/theme/js/theme.init.js"></script>
         {% include "modules/analytics.html" %}
 
-    </body>
+        <!-- Twitter Widget Initializer -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
+
+        {% block scripts %}
+        {% endblock %}
+    </body>
 </html>

@@ -10,12 +10,17 @@
     <hr />
     <h4>Categories</h4>
     <ul class="nav nav-list primary push-bottom">
-        <li><a href="#">Design</a></li>
-        <li><a href="#">Photos</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Lifestyle</a></li>
-        <li><a href="#">Technology</a></li>
+        {% for category, articles in categories|sort %}
+        <li><a href="{{category.url}}">{{category}}</a></li>
+        {% endfor %}
     </ul>
+    <hr />
+    <span id="github-feed"></span>
+    <hr />
+    <h4>Latest Tweets</h4>
+    <a class="twitter-timeline" href="https://twitter.com/{{ TWITTER_ID }}" data-widget-id="{{ TWITTER_WIDGET_ID }}">Please Wait...</a>
+
+<!--
     <div class="tabs">
         <ul class="nav nav-tabs">
             <li class="active"><a href="#popularPosts" data-toggle="tab"><i class="fa fa-star"></i> Popular</a></li>
@@ -120,6 +125,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
 </aside>

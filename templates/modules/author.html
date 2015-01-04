@@ -1,0 +1,25 @@
+<div class="post-block post-author clearfix">
+    <h3><i class="fa fa-user"></i>Author</h3>
+    <div class="img-thumbnail">
+        {% if article.author_url %}
+        <a href="{{ article.author_url }}">
+            <img src="{{ SITEURL }}/images/author/{{ article.author }}.jpg" alt="{{ article.author }}">
+        </a>
+        {% else %}
+        <a href="{{ SITEURL }}">
+            <img src="{{ SITEURL }}/images/authors/{{ AUTHOR|replace(" ", "_") }}.jpg" alt="{{ AUTHOR }}">
+        </a>
+        {% endif %}
+    </div>
+    <p>
+        <strong class="name">
+        {% if article.author_url %} 
+            <a href="{{ article.author_url }}">{{ article.author }}</a>
+        {% else %}
+            <a href="{{ SITEURL }}">{{ AUTHOR }}</a>
+        {% endif %}
+        </strong>
+    </p>
+    <p>{% if article.author_bio %} {{ article.author_bio }} {% else %} {{ AUTHORBIO }} {% endif %}</p>
+</div>
+
