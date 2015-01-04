@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8">
+        {% block title %}
+        <title>{{ SITENAME }} | {{TAGLINE}}</title>
+        {% endblock %}
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Web Fonts  -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/fontawesome/css/font-awesome.css">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/owlcarousel/owl.carousel.css" media="screen">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/owlcarousel/owl.theme.css" media="screen">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/vendor/magnific-popup/magnific-popup.css" media="screen">
+
+        <!-- Theme CSS -->
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/css/theme.css">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/css/theme-elements.css">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/css/theme-blog.css">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/css/theme-shop.css">
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/css/theme-animate.css">
+
+        <!-- Skin CSS -->
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/css/skins/default.css">
+
+        <!-- Theme Custom CSS -->
+        <link rel="stylesheet" href="{{SITE_URL}}/theme/css/custom.css">
+
+        <!-- Head Libs -->
+        <script src="{{SITE_URL}}/theme/vendor/modernizr/modernizr.js"></script>
+
+
+        <!--[if IE]>
+            <link rel="stylesheet" href="{{SITE_URL}}/theme/css/ie.css">
+        <![endif]-->
+
+        <!--[if lte IE 8]>
+            <script src="{{SITE_URL}}/theme/vendor/respond/respond.js"></script>
+            <script src="{{SITE_URL}}/theme/vendor/excanvas/excanvas.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="body">
+           {% include "modules/nav.html" %}
+            <div role="main" class="main">
+            {% include "modules/page-top.html" %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                        {% block content %}
+                        {% endblock %}
+                        </div>
+                        <div class="col-md-3">
+                        {% include "modules/sidebar.html" %} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% include "modules/footer.html" %}
+        </div>
+
+        <!-- Vendor -->
+        <script src="{{SITE_URL}}/theme/vendor/jquery/jquery.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jquery.appear/jquery.appear.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jquery.easing/jquery.easing.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jquery-cookie/jquery-cookie.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/bootstrap/bootstrap.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/common/common.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jquery.validation/jquery.validation.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jquery.stellar/jquery.stellar.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jquery.gmap/jquery.gmap.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/isotope/jquery.isotope.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/owlcarousel/owl.carousel.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/jflickrfeed/jflickrfeed.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+        <script src="{{SITE_URL}}/theme/vendor/vide/vide.js"></script>
+
+        <!-- Theme Base, Components and Settings -->
+        <script src="{{SITE_URL}}/theme/js/theme.js"></script>
+        <!-- Theme Custom -->
+        <script src="{{SITE_URL}}/theme/js/custom.js"></script>
+        <!-- Theme Initialization Files -->
+        <script src="{{SITE_URL}}/theme/js/theme.init.js"></script>
+        {% include "modules/analytics.html" %}
+
+    </body>
+
+</html>
