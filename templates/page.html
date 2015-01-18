@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>{{ SITENAME }} | {{ page.title }}</title>
+{% endblock %}
+
+{% block content %}
+<div class="blog-posts single-post">
+    <page class="post post-large blog-single-post">
+        {% if page.image %}
+        <div class="post-image">
+            <img class="img-responsive" src="{{ page.image }}" alt="{{ article.summary }}">
+        </div>
+        {% if page.imagecredit %}
+        <div class="post-image-credit"><small><strong>ImageCredit: </strong>{{ page.imagecredit|urlize(40,nofollow=True) }}</small></div>
+        {% endif %}
+        {% endif %}
+        {% if page.video %}
+        <div class="post-image">
+           <iframe src="http://www.youtube.com/embed/{{page.video}}" frameborder="0" allowfullscreen></iframe>  
+        </div>
+        {% endif %}
+        <div class="post-content">
+            {{ page.content }}
+        </div>
+
+    </page>
+</div>
+{% endblock %}
