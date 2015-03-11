@@ -9,7 +9,7 @@
     <article class="post post-large blog-single-post">
         {% if article.image %}
         <div class="post-image">
-            <img class="img-responsive" src="{{ article.image }}" alt="{{ article.summary }}">
+            <img class="img-responsive" src="{{ article.image }}" alt="{{ article.imagecaption }}">
         </div>
         {% if article.imagecredit %}
         <div class="post-image-credit"><small><strong>ImageCredit: </strong>{{ article.imagecredit|urlize(40,nofollow=True) }}</small></div>

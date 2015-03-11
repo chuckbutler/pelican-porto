@@ -7,7 +7,7 @@
         <div class="post-image single">
             <a href="/{{article.url}}">
             {% if article.image %}
-                <img class="img-thumbnail" src="{{ article.image}}" alt="{{article.summary}}">
+                <img class="img-thumbnail" src="{{ article.image}}" alt="{{article.imagecaption}}">
             {% endif %}
             {% if article.video %}
                 <iframe src="http://www.youtube.com/embed/{{article.video}}" frameborder="0" allowfullscreen></iframe>  
